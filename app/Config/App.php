@@ -23,8 +23,23 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://localhost/';
+	public $baseURL;
 
+	public function __construct() {
+        parent::__construct();
+
+        $this->setBaseUrl(); // Set the Base URL
+    }
+	
+	protected function setBaseUrl() {
+	if ($_ENV['CI_ENVIRONMENT'] == 'development') {
+			$this->baseURL = 'http://localhost/';
+	} else {
+			$this->baseURL = 'http://chekalo.gabinoramirez.com/';
+	}
+	}
+	
+	
 	/**
 	 * --------------------------------------------------------------------------
 	 * Index File
