@@ -35,7 +35,7 @@ class App extends BaseConfig
 	if ($_SERVER['SERVER_NAME'] == 'localhost') {
 			$this->baseURL = 'http://localhost/';
 	} else {
-			$this->baseURL = 'http://chekalo.gabinoramirez.com/';
+			$this->baseURL = 'https://chekalo.gabinoramirez.com/';
 	}
 	}
 	
