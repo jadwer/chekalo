@@ -32,7 +32,7 @@ class App extends BaseConfig
     }
 	
 	protected function setBaseUrl() {
-	if ($_ENV['CI_ENVIRONMENT'] == 'development') {
+	if ($_SERVER['SERVER_NAME'] == 'localhost') {
 			$this->baseURL = 'http://localhost/';
 	} else {
 			$this->baseURL = 'http://chekalo.gabinoramirez.com/';
