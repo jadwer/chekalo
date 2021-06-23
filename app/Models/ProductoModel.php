@@ -13,7 +13,7 @@ class ProductModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType    = 'App\Entities\Producto';
-    protected $allowedFields = ['nombre', 'precio','id_usuario'];
+    protected $allowedFields = ['nombre', 'precio','id_usuario', 'creacion'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'creacion';

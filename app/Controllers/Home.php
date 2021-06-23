@@ -15,7 +15,7 @@ class Home extends BaseController
 	{
         $parser = \Config\Services::parser();
 
-        // echo $this->db->table('productos')->countAll();
+        echo $this->db->table('productos')->countAll();
         $data = [
             'nombre' => "Arroz",
             'precio' => 20,
@@ -24,12 +24,12 @@ class Home extends BaseController
         ];
         
         $producto = new Producto($data);
-        //d($producto);
+        d($producto);
         
         $model = model('ProductoModel');
-        //$model->save($producto);
+        $model->save($producto);
 
-  		$data2 = ['title'=>"titulo"];
+  		$data2 = ['title'=>"Pagina Principal"];
         return view('home', $data2);
 
 	}
